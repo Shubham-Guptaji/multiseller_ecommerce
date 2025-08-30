@@ -10,7 +10,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
   if(!user || String(user?.privateMetadata?.role).toUpperCase() !== "ADMIN") redirect("/");
   return <div className="w-full h-full">
     {/* Sidebar */}
-    <Sidebar  />
+    <Sidebar isAdmin />
     <div className="w-[100%-300px] ml-[300px] ">
       {/* Header */}
       <Header />
